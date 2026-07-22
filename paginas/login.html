@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/regiLog.css">
+    <title>Entrar - Press Buy</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav id="navbar">
+            <div id="navbar-inner">
+                <h1>Press Buy</h1>
+                <ul id="navbar-links">
+                    <li><a href="/paginas/index.html">Home</a></li>
+                    <li><a href="#">Catalogo</a></li>
+                    <li><a href="#">Perfil</a></li>
+                    <li><a href="#">Configurações</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form>
+                <!-- NOME OU EMAIL -->
+                <div class="box-input">
+                    <label for="title"> 
+                        Nome ou Email <span class="required-field">*</span>
+                    </label>
+
+                    <input 
+                        type="text" 
+                        name="title" 
+                        id="title" 
+                        class="block"
+                        placeholder="Nome ou email" 
+                        minlength="1" 
+                        maxlength="30" 
+                        required>
+                </div>
+
+                <!-- senha -->
+                <div class="box-input">
+                    <label for="title"> 
+                        Senha <span class="required-field">*</span>
+                    </label>
+
+                    <input 
+                        type="password" 
+                        name="password" 
+                        id="password" 
+                        class="block"
+                        placeholder="senha" 
+                        minlength="1" 
+                        maxlength="30" 
+                        required>
+                </div>
+                
+                <div class="log-n-saber">
+                    <!-- Manter logado -->
+                    <div class="radio">
+                        <input type="checkbox" name="optional" value="loginPer">
+                        <label for="loginPer">Manter logado</label>
+                    </div>
+
+                    <p><a href="#">Recuperar senha</a></p>
+                </div>
+
+                <input type="submit" value="Entrar">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
