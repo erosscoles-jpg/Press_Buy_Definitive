@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/config.css">
+    <title>Configurações</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav id="navbar">
+            <div id="navbar-inner">
+                <h2>Press Buy</h2>
+                <ul id="navbar-links">
+                    <li><a href="/paginas/index.html">Home</a></li>
+                    <li><a href="#">Catalogo</a></li>
+                    <li><a href="/paginas/login.html">Perfil</a></li>
+                    <li><a href="#">Configurações</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h3>Configurações</h3>
+            <p>Ajuste como a Press Buy monitora e avisa sobre os preços da sua lista.</p>
+
+            <div class="config">
+                <div class="config-box">
+                    <h4>Notificações</h4>
+                    <div class="box-siting">
+                        <div class="left">
+                           <p class="title">Alerta de queda de preço</p>
+                            <p class="desc">Avisar quando um jogo de sua lista entra em promoção.</p> 
+                        </div>
+                            <div class="right">
+                                <label class="switch">
+                                    <input type="checkbox" data-setting="notify"><span class="slider"></span></label>
+                            </div>
+                        
+                    </div>
+                    
+
+                    <div class="box-siting">
+                        <div class="left">
+                           <p class="title">Resumo semanal</p>
+                            <p class="desc">Receber um resumo das melhores ofertas da semana.</p> 
+                        </div>
+                        <div class="right">
+                            <label class="switch">
+                                <input type="checkbox" data-setting="notify"><span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="config-box">
+                    <h4>Conta</h4>
+                    
+                    <div class="box-siting-sair">
+                        <div class="left">
+                            <p class="title">Ecerrar sessão</p>
+                            <p class="desc">Você poderá entrar novamente quando quiser.</p>
+                        </div>
+                        <div class="right">
+                            <button class="btn-sair">Sair</button>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
