@@ -43,3 +43,16 @@ a:hover{
     display: flex;
     gap: 1rem;
 }
+
+/* footer */
+.footer{
+  border-top: 1px solid var(--border-soft);
+  padding: 30px 40px;
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center;
+  font-size: 0.85rem;
+  margin: 0 auto;
+  color: #e9edf9;
+  border-top: 2px solid #223258;
+}

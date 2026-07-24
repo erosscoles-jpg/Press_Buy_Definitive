@@ -1,63 +1,41 @@
-
-
-/* Banner PROMOCIONAL */
-
-.banner {
-    padding: 80px 60px;
-    border-bottom: 1px solid #9aa7c7;
-}
-
-.banner h2,
-.banner h3{
-    color: #e9edf9;
-    text-align: center;
-    font-weight: bold;
-}
-
-.banner h2{
-    font-size: 50px;
-}
-
-.banner h3{
-    font-size: 32px;
-}
-
-.banner-btn{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 320px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.btn-criar,
-.btn-oferta{
-    background-color: #223258;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #9aa7c7;
-}
-
-.btn-criar:hover,
-.btn-oferta:hover{
-    background-color: #4c6fff;
-    color: #e9edf9;
-}
-/* CONTEUDO PRINCIPAL */
-
 .container{
+    padding: 24px 40px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 32px 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+}
+
+.container-perfil{
+    margin-bottom: 20px;
+    border-bottom: 2px solid #121a2c;
 }
 
 
-/* BARRA DE PESQUISA */
+.perfil-info{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #e9edf9;
+    margin-bottom: 10px;
+}
 
+.image{
+    width: 200px;
+    height: 180px;
+    background-color:#e9edf951;
+    border: 1px solid #121a2c;
+    border-radius: 10px;
+}
+
+.infos{
+    font-size: 24px;
+}
+
+
+
+/* Barra de pesquisa */
 #search-bar{
     width: 100%;
     margin-bottom: 30px;
@@ -100,5 +78,3 @@
 #search-bar input[type="submit"]:hover{
     background-color: #4c6fff;
 }
-
-
