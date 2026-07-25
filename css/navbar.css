@@ -1,58 +1,118 @@
-/* GERAL */
-*{
-    margin: 0;
-    padding: 0;
-    font-family:Helvetica;
-    background-color: #0a1120;
-    box-sizing: border-box;
-}
+/* ==========================================================================
+   PRESS BUY — navbar.css
+   Cabeçalho e rodapé, presentes em todas as páginas.
+   Depende dos tokens definidos em base.css (carregar base.css antes deste).
+   ========================================================================== */
 
-ul{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-    color: #e9edf9;
-    transition: 0.4s;
-}
-
-a:hover{
-    color: #4c6fff;
-}
-/* NAVBAR */
 #navbar{
-    padding: 24px 40px;
-    border-bottom: 2px solid #223258;
+  padding: 20px 40px;
+  border-bottom: 2px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg);
 }
 
 #navbar-inner{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #e9edf9;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--text);
 }
 
-#navbar-inner h2{
-    color:  #e9edf9;
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+.brand:hover{ color: var(--text); }
+
+.brand .dot{
+  width:9px; height:9px; border-radius:50%;
+  background: var(--accent-glow);
+  box-shadow: 0 0 0 3px rgba(56,189,248,0.16), 0 0 10px rgba(56,189,248,0.8);
 }
 
 #navbar-links{
-    display: flex;
-    gap: 1rem;
+  display:flex;
+  gap: 2rem;
+  align-items:center;
+}
+
+#navbar-links a{
+  font-weight: 500;
+  color: var(--text-dim);
+  position:relative;
+  padding: 4px 0;
+}
+#navbar-links a:hover{ color: var(--text); }
+
+/* marque a página atual assim: <a href="..." class="active"> */
+#navbar-links a.active{ color: var(--text); }
+#navbar-links a.active::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:-4px;
+  height:2px; border-radius:2px;
+  background: var(--accent-glow);
+}
+
+/* botão hamburguer (só aparece em telas pequenas) */
+.nav-toggle{
+  display:none;
+  flex-direction:column;
+  gap:4px;
+  background:none;
+  border:none;
+  padding: 6px;
+}
+.nav-toggle span{
+  width:22px; height:2px;
+  background: var(--text);
+  border-radius:2px;
+}
+
+@media (max-width: 760px){
+  #navbar{ padding: 16px 20px; }
+  .nav-toggle{ display:flex; }
+  #navbar-links{
+    position:fixed;
+    inset: 65px 0 0 0;
+    flex-direction:column;
+    align-items:flex-start;
+    gap: 4px;
+    padding: 20px 24px;
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--border);
+    transform: translateY(-8px);
+    opacity:0;
+    pointer-events:none;
+    transition: all .2s ease;
+  }
+  /* quando o JS existir, ele alterna esta classe no #navbar-links */
+  #navbar-links.open{ transform:none; opacity:1; pointer-events:auto; }
+  #navbar-links a{ width:100%; padding: 10px 0; }
 }
 
 /* footer */
 .footer{
-  border-top: 1px solid var(--border-soft);
-  padding: 30px 40px;
-  display:flex; 
-  justify-content:space-between; 
+  border-top: 2px solid var(--border);
+  padding: 26px 40px;
+  display:flex;
+  justify-content:space-between;
   align-items:center;
   font-size: 0.85rem;
+  max-width: 1200px;
   margin: 0 auto;
-  color: #e9edf9;
-  border-top: 2px solid #223258;
+  color: var(--text-faint);
+}
+
+@media (max-width: 700px){
+  .footer{ padding: 22px 20px; flex-direction:column; gap:6px; text-align:center; }
 }

@@ -1,80 +1,53 @@
+/* ==========================================================================
+   PRESS BUY — perfil.css
+   Depende de base.css + navbar.css + cadgame.css.
+   ========================================================================== */
+
 .container{
-    padding: 24px 40px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
+  padding: 30px 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
 }
 
 .container-perfil{
-    margin-bottom: 20px;
-    border-bottom: 2px solid #121a2c;
+  margin-bottom: 20px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--border);
 }
 
-
 .perfil-info{
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-    max-width: 1200px;
-    margin: 0 auto;
-    color: #e9edf9;
-    margin-bottom: 10px;
+  display:flex;
+  align-items:center;
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto 10px;
+  color: var(--text);
 }
 
 .image{
-    width: 200px;
-    height: 180px;
-    background-color:#e9edf951;
-    border: 1px solid #121a2c;
-    border-radius: 10px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-glow));
+  border: none;
+  flex-shrink:0;
 }
 
-.infos{
-    font-size: 24px;
+.infos{ font-size: 1rem; }
+.infos h4{
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+.infos p{
+  font-size: 0.92rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
 }
 
-
-
-/* Barra de pesquisa */
-#search-bar{
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-#search-bar form{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-#search-bar input[type="text"]{
-    flex: 1;
-    height: 45px;
-    padding: 0 15px;
-    border: 1px solid #223258;
-    border-radius: 6px;
-    background-color: #121a2c;
-    color: #e9edf9;
-    font-size: 16px;
-}
-
-#search-bar input[type="text"]::placeholder{
-    color: #9aa7c7;
-}
-
-#search-bar input[type="submit"]{
-    width: 120px;
-    height: 45px;
-    border: none;
-    border-radius: 6px;
-    background-color: #223258;
-    color: #e9edf9;
-    cursor: pointer;
-    transition: .3s;
-}
-
-#search-bar input[type="submit"]:hover{
-    background-color: #4c6fff;
+@media (max-width: 700px){
+  .container{ padding: 26px 20px; }
+  .perfil-info{ flex-direction:column; text-align:center; }
 }

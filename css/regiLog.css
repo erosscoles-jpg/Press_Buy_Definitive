@@ -1,85 +1,122 @@
-*{
-    color: #e9edf9;
-     font-family:Helvetica;
+/* ==========================================================================
+   PRESS BUY — regiLog.css
+   Login e Registro. Depende de base.css + navbar.css.
+   OBS: antes cada elemento repetia "background-color: #101a30" por causa
+   do reset global em navbar.css (*{background-color:...}). Isso foi
+   corrigido em base.css, então aqui basta definir o fundo no .login-container.
+   ========================================================================== */
+
+main{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height: calc(100vh - 80px);
+  padding: 40px 20px;
 }
 
-/* Login */
-main {
-    display: flex;
-    justify-content: center; /* horizontal */
-    align-items: center;     /* vertical */
-    min-height: calc(100vh - 80px); /* altura da tela menos o header */
+.login-container{
+  width: 100%;
+  max-width: 440px;
+  padding: 40px 36px;
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  border-radius: var(--radius-lg);
+  position:relative;
+  overflow:hidden;
 }
-
-.login-container {
-    width: 35%;
-    padding: 40px 32px;
-    border: 1px solid #223258;
-    background-color: #101a30;
+.login-container::before{
+  content:"";
+  position:absolute; top:-60px; right:-60px;
+  width:180px; height:180px; border-radius:50%;
+  background: radial-gradient(circle, rgba(76,111,255,0.35), transparent 70%);
 }
-
 
 .login-container h2{
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 20px;
-    background-color: #101a30;
+  text-align:center;
+  font-size: 1.9rem;
+  margin-bottom: 8px;
+  position:relative; z-index:1;
+}
+
+/* texto de instrução, usado por exemplo na tela de recuperar senha */
+.auth-sub{
+  text-align:center;
+  color: var(--text-faint);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: 26px;
+  position:relative; z-index:1;
 }
 
 .box-input{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    background-color: #101a30;
+  display:flex;
+  flex-direction:column;
+  margin-bottom: 18px;
+  position:relative; z-index:1;
 }
 
 .box-input label{
-    font-size: 20px;
-    background-color: #101a30;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dim);
+  margin-bottom: 6px;
 }
 
 .box-input input{
-    margin-left: 10px;
-    margin-top: 10px;
-    font-size: 16px;
-    padding: 10px;
-    border: 1px solid #e9edf9;
-    background-color: #101a30;
+  margin-top: 0;
+  font-size: 0.95rem;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  color: var(--text);
+  outline:none;
+  transition: border-color .15s ease;
 }
+.box-input input:focus{ border-color: var(--accent); }
+.box-input input::placeholder{ color: var(--text-faint); }
 
-.required-field{
-    color: red;
-    background-color: #101a30;
-}
+.required-field{ color: var(--danger); }
 
 .log-n-saber{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 16px;
-    margin: 17px 17px 22px 24px;
-    width: 90%;
-    background-color: #101a30;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size: 0.85rem;
+  margin: 6px 0 22px;
+  color: var(--text-dim);
+  position:relative; z-index:1;
 }
+.log-n-saber .radio{ display:flex; align-items:center; gap:8px; }
+.log-n-saber a{ color: var(--accent-glow); font-weight:600; }
+
+form{ position:relative; z-index:1; }
 
 input[type="submit"]{
-    font-size: 22px;
-    background-color: #223258;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #9aa7c7;
-    display: block;
-    margin: 0 auto;
+  width: 100%;
+  font-size: 1rem;
+  background: linear-gradient(135deg, var(--accent), #3653d6);
+  color:#fff;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  border: none;
+  font-weight: 600;
+  transition: transform .15s ease, box-shadow .15s ease;
 }
-
 input[type="submit"]:hover{
-    background-color: #4c6fff;
-    color: #e9edf9;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(76,111,255,0.4);
 }
 
-form{
-    background-color: #101a30;
+.auth-switch{
+  text-align:center;
+  margin-top: 20px;
+  font-size: 0.88rem;
+  color: var(--text-faint);
+  position:relative; z-index:1;
 }
+.auth-switch a{ color: var(--accent-glow); font-weight:600; }
 
-/* REgistrar */
-
+@media (max-width: 500px){
+  .login-container{ padding: 32px 24px; }
+}

@@ -1,104 +1,74 @@
+/* ==========================================================================
+   PRESS BUY — home_page.css
+   Depende de base.css + navbar.css + cadgame.css.
+   ========================================================================== */
 
-
-/* Banner PROMOCIONAL */
-
-.banner {
-    padding: 80px 60px;
-    border-bottom: 1px solid #9aa7c7;
-}
-
-.banner h2,
-.banner h3{
-    color: #e9edf9;
-    text-align: center;
-    font-weight: bold;
+/* ---- BANNER PROMOCIONAL ---- */
+.banner{
+  padding: 70px 40px;
+  border-bottom: 1px solid var(--border);
+  text-align:center;
+  background:
+    radial-gradient(circle at 80% -10%, rgba(76,111,255,0.18), transparent 55%),
+    var(--bg-soft);
 }
 
 .banner h2{
-    font-size: 50px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
 }
 
 .banner h3{
-    font-size: 32px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--text-dim);
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .banner-btn{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 320px;
-    margin: 0 auto;
-    padding: 20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 16px;
+  width:auto;
+  margin: 30px auto 0;
+  padding: 0;
 }
 
 .btn-criar,
 .btn-oferta{
-    background-color: #223258;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #9aa7c7;
+  padding: 12px 26px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  font-weight: 600;
+  transition: transform .15s ease, box-shadow .15s ease, background .2s ease, border-color .2s ease;
 }
 
-.btn-criar:hover,
-.btn-oferta:hover{
-    background-color: #4c6fff;
-    color: #e9edf9;
+.btn-criar{
+  background: linear-gradient(135deg, var(--accent), #3653d6);
+  color:#fff;
+  border: none;
+  box-shadow: 0 6px 18px rgba(76,111,255,0.3);
 }
-/* CONTEUDO PRINCIPAL */
+.btn-criar:hover{ transform: translateY(-1px); box-shadow: 0 10px 24px rgba(76,111,255,0.4); color:#fff; }
 
+.btn-oferta{ background: var(--surface-2); color: var(--text); }
+.btn-oferta:hover{ background: var(--accent); border-color: var(--accent); color:#fff; }
+
+/* ---- CONTEÚDO PRINCIPAL ---- */
 .container{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 32px 40px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  padding: 32px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-
-/* BARRA DE PESQUISA */
-
-#search-bar{
-    width: 100%;
-    margin-bottom: 30px;
+@media (max-width: 700px){
+  .banner{ padding: 50px 20px; }
+  .container{ padding: 26px 20px; }
 }
-
-#search-bar form{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-#search-bar input[type="text"]{
-    flex: 1;
-    height: 45px;
-    padding: 0 15px;
-    border: 1px solid #223258;
-    border-radius: 6px;
-    background-color: #121a2c;
-    color: #e9edf9;
-    font-size: 16px;
-}
-
-#search-bar input[type="text"]::placeholder{
-    color: #9aa7c7;
-}
-
-#search-bar input[type="submit"]{
-    width: 120px;
-    height: 45px;
-    border: none;
-    border-radius: 6px;
-    background-color: #223258;
-    color: #e9edf9;
-    cursor: pointer;
-    transition: .3s;
-}
-
-#search-bar input[type="submit"]:hover{
-    background-color: #4c6fff;
-}
-
-

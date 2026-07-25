@@ -1,0 +1,142 @@
+/* ==========================================================================
+   PRESS BUY — base.css
+   Tokens de cor/tipografia + reset + componentes globais (botão, busca,
+   toast, estado vazio). Carregado em TODAS as páginas, antes dos CSS
+   específicos de cada página.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
+
+:root{
+  /* cores */
+  --bg:            #0a1120;
+  --bg-soft:       #101a30;
+  --bg-elevated:   #121a2c;
+  --surface:       #101a30;
+  --surface-2:     #16223e;
+  --border:        #223258;
+  --border-soft:   #1a2648;
+
+  --text:          #e9edf9;
+  --text-dim:      #9aa7c7;
+  --text-faint:    #6b7a9e;
+
+  --accent:        #4c6fff;
+  --accent-glow:   #38bdf8;
+  --success:       #34d399;
+  --warning:       #fbbf24;
+  --danger:        #fb7185;
+
+  /* tipografia */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body:    'Inter', Helvetica, sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+
+  /* geometria */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+/* IMPORTANTE: não colocar background-color aqui no *; deixe cada
+   componente definir o próprio fundo (era isso que obrigava repetir
+   background-color em cada elemento do regiLog.css) */
+
+html{ scroll-behavior:smooth; }
+
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  min-height: 100vh;
+}
+
+h1,h2,h3,h4,h5{ font-family: var(--font-display); font-weight:600; }
+
+ul{ list-style:none; }
+
+a{ text-decoration:none; color: var(--text); transition: color .2s ease; }
+a:hover{ color: var(--accent); }
+
+img{ max-width:100%; display:block; }
+
+button, input[type="submit"]{ font-family:inherit; cursor:pointer; }
+
+.mono{ font-family: var(--font-mono); }
+
+/* ---- botão genérico ---- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-weight:600;
+  font-size: 0.95rem;
+  transition: background .2s ease, border-color .2s ease, transform .15s ease;
+}
+.btn:hover{ background: var(--accent); border-color: var(--accent); color:#fff; transform: translateY(-1px); }
+
+/* ---- barra de busca (usada em index.html e perfil.html) ---- */
+#search-bar{ width:100%; margin-bottom: 20px; }
+#search-bar form{
+  display:flex; gap:10px;
+  max-width:700px; margin:0 auto;
+}
+#search-bar input[type="text"]{
+  flex:1; height:45px; padding:0 15px;
+  border:1px solid var(--border); border-radius: var(--radius-sm);
+  background: var(--bg-elevated); color: var(--text); font-size:1rem;
+}
+#search-bar input[type="text"]::placeholder{ color: var(--text-dim); }
+#search-bar input[type="submit"], #search-bar button{
+  min-width: 110px; height:45px; border:none; border-radius: var(--radius-sm);
+  background: var(--surface-2); color: var(--text); font-weight:600; transition:.2s ease;
+}
+#search-bar input[type="submit"]:hover, #search-bar button:hover{ background: var(--accent); color:#fff; }
+
+/* ---- título de seção com "beacon" (indica dado ao vivo) ---- */
+.section-title{
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  display:flex; align-items:center; gap:10px;
+  margin: 10px 0 18px;
+}
+.section-title .beacon{
+  width:8px; height:8px; border-radius:50%;
+  background: var(--success);
+  box-shadow: 0 0 8px var(--success);
+}
+
+/* ---- estado vazio (lista sem resultado) ---- */
+.empty-state{
+  text-align:center;
+  padding: 50px 20px;
+  color: var(--text-faint);
+  max-width:1200px;
+  margin: 0 auto;
+}
+.empty-state a{ color: var(--accent-glow); font-weight:600; }
+
+/* ---- toast de feedback (usado pelo main.js) ---- */
+.toast{
+  position:fixed; bottom:26px; left:50%; transform: translateX(-50%) translateY(20px);
+  background: var(--surface-2);
+  border:1px solid var(--accent);
+  color: var(--text);
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size:0.88rem;
+  font-weight:600;
+  opacity:0; pointer-events:none;
+  transition: all .25s ease;
+  z-index: 200;
+}
+.toast.show{ opacity:1; transform: translateX(-50%) translateY(0); }
+
+@media (max-width: 700px){
+  #search-bar form{ flex-wrap:wrap; }
+}

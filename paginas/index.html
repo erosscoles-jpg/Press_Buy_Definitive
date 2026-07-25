@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/home_page.css">
+    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/home_page.css">
     <link rel="stylesheet" href="/css/cadgame.css">
     <title>Press Buy</title>
 </head>
@@ -13,65 +14,71 @@
     <header>
         <nav id="navbar">
             <div id="navbar-inner">
-                <h2>Press Buy</h2>
+                <a href="/index.html" class="brand"><span class="dot"></span>Press Buy</a>
                 <ul id="navbar-links">
                     <li><a href="/paginas/index.html">Home</a></li>
-                    <li><a href="#">Catalogo</a></li>
-                    <li><a href="/paginas/login.html">Perfil</a></li>
-                    <li><a href="#">Configurações</a></li>
+                    <li><a href="/paginas/perfil.html">Perfil</a></li>
+                    <li><a href="/paginas/config.html">Configurações</a></li>
                 </ul>
+                <button class="nav-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
             </div>
         </nav>
     </header>
-    <!-- BANNER  -->
-        <div class="banner">
-            <h2>Press buy</h2>
-            <h3>Toda promoção de jogos, num só radar.</h3>
-            <div class="banner-btn">
-                <a href="/paginas/registrar.html" class="btn-criar">Criar conta gratuita</a>
-                <a href="#" class="btn-oferta">Ver ofertas</a>
-            </div>
-        </div>
 
+    <!-- BANNER -->
+    <div class="banner">
+        <h2>Press Buy</h2>
+        <h3>Toda promoção de jogos, num só radar.</h3>
+        <div class="banner-btn">
+            <a href="/paginas/registrar.html" class="btn-criar">Criar conta gratuita</a>
+            <a href="#catalogo" class="btn-oferta">Ver ofertas</a>
+        </div>
+    </div>
 
     <!-- MAIN -->
-     <div class="container">
+    <div class="container">
 
         <aside id="search-bar">
             <form>
-                <input type="submit" value="Filtrar">
                 <input type="text" placeholder="Pesquisar jogos...">
                 <input type="submit" value="Buscar">
-                
             </form>
         </aside>
+
+        <h3 class="section-title" id="catalogo"><span class="beacon"></span>Ofertas da semana</h3>
 
         <main id="cards-container">
             <!-- CARDS OFERTAS -->
             <article class="card-game">
                 <a class="pag-game" href="/paginas/game_page.html">
-                    <img src="/img/apps.21536.13727851868390641.c9cc5f66-aff8-406c-af6b-440838730be0.68796bde-cbf5-4eaa-a299-011417041da6" alt="halo infinit">
-                    <h3 class="title">Halo Infinit</h3>
+                    <span class="discount-flag">-20%</span>
+                    <img src="/img/apps.21536.13727851868390641.c9cc5f66-aff8-406c-af6b-440838730be0.68796bde-cbf5-4eaa-a299-011417041da6" alt="Halo Infinite">
+                    <h3 class="title">Halo Infinite</h3>
                     <div class="container-valor">
-                        <img class="logo-publisher" src="/img/Xbox_one_logo.svg.webp" alt="logo da publisher">
-                        <h5 class="valor">R$ 150,00</h5>
+                        <img class="logo-publisher" src="/img/Xbox_one_logo.svg.webp" alt="logo Xbox">
+                        <h5 class="valor">R$ 120,00</h5>
                     </div>
                 </a>
             </article>
 
             <article class="card-game">
-                <a class="pag-game" href="#">
-                    <img src="/img/apps.21536.13727851868390641.c9cc5f66-aff8-406c-af6b-440838730be0.68796bde-cbf5-4eaa-a299-011417041da6" alt="halo infinit">
-                    <h3 class="title">Halo Infinit</h3>
+                <a class="pag-game" href="/paginas/game_page.html">
+                    <span class="discount-flag">-25%</span>
+                    <img src="/img/apps.21536.13727851868390641.c9cc5f66-aff8-406c-af6b-440838730be0.68796bde-cbf5-4eaa-a299-011417041da6" alt="Halo Infinite">
+                    <h3 class="title">Halo Infinite</h3>
                     <div class="container-valor">
-                        <img class="logo-publisher" src="/img/Xbox_one_logo.svg.webp" alt="logo da publisher">
+                        <img class="logo-publisher" src="/img/Steam_Logo.png" alt="logo Steam">
                         <h5 class="valor">R$ 150,00</h5>
                     </div>
                 </a>
             </article>
 
-
         </main>
-     </div>
+    </div>
+
+    <footer class="footer">
+        <span>© 2026 Press Buy. Preços exibidos a título ilustrativo.</span>
+        <span class="mono">v1.0</span>
+    </footer>
 </body>
 </html>

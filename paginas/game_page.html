@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/navbar.css">
     <link rel="stylesheet" href="/css/game-page.css">
-    <title>Game page - Press Buy</title>
+    <title>Halo Infinite - Press Buy</title>
 </head>
 <body>
     <!-- HEADER -->
     <header>
         <nav id="navbar">
             <div id="navbar-inner">
-                <h1>Press Buy</h1>
+                <a href="/index.html" class="brand"><span class="dot"></span>Press Buy</a>
                 <ul id="navbar-links">
                     <li><a href="/paginas/index.html">Home</a></li>
-                    <li><a href="#">Catalogo</a></li>
-                    <li><a href="#">Perfil</a></li>
-                    <li><a href="#">Configurações</a></li>
+                    <li><a href="/paginas/perfil.html">Perfil</a></li>
+                    <li><a href="/paginas/config.html">Configurações</a></li>
                 </ul>
+                <button class="nav-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
             </div>
         </nav>
     </header>
@@ -27,101 +28,96 @@
         <div class="container-page">
             <section class="info-games">
                 <div class="img">
-                    <img src="/img/images.jfif" alt="foto do jogo">
+                    <img src="/img/apps.21536.13727851868390641.c9cc5f66-aff8-406c-af6b-440838730be0.68796bde-cbf5-4eaa-a299-011417041da6" alt="foto do jogo">
                     <h2>Halo: Infinite</h2>
                 </div>
-                
+
                 <div class="infos">
-                    <p>Publisher: </p>
-                    <p>Desenvolvedora</p>
-                    <p>Generos:</p>
+                    <p><strong>Publisher:</strong> Xbox Game Studios</p>
+                    <p><strong>Desenvolvedora:</strong> 343 Industries</p>
+                    <p><strong>Gêneros:</strong></p>
                     <div class="genoros">
                         <p>FPS</p>
-                        <p>Open Word</p>
-                        <p>Short</p>
+                        <p>Open World</p>
+                        <p>Sci-fi</p>
                         <p>Adventure</p>
                     </div>
-                    <p>Preços:</p>
+                    <p><strong>Preços:</strong></p>
                     <div class="prices">
                         <div class="box-prices">
                             <a href="#">
-                               <img src="/img/Xbox_one_logo.svg.webp" alt="logo" class="logo">
-                                <p>R$ 120,00</p> 
-                            </a>
-                        </div>
-                        
-                        <div class="box-prices">
-                            <a href="#">
-                               <img src="/img/Steam_Logo.png" alt="logo" class="logo">
-                                <p>R$ 150,00</p> 
+                                <img src="/img/Xbox_one_logo.svg.webp" alt="logo Xbox" class="logo">
+                                <p>R$ 120,00</p>
                             </a>
                         </div>
 
                         <div class="box-prices">
                             <a href="#">
-                               <img src="/img/cmhj5bujv007502rpaz76cgm7.png" alt="logo" class="logo">
-                                <p>R$ 180,00</p> 
+                                <img src="/img/Steam_Logo.png" alt="logo Steam" class="logo">
+                                <p>R$ 150,00</p>
+                            </a>
+                        </div>
+
+                        <div class="box-prices">
+                            <a href="#">
+                                <img src="/img/cmhj5bujv007502rpaz76cgm7.png" alt="logo PlayStation" class="logo">
+                                <p>R$ 180,00</p>
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <h2>Sinopse</h2>
+            <h3 class="section-title">Sinopse</h3>
 
             <div class="snop-history">
-
                 <div class="sinopse">
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit consequatur laborum perspiciatis esse rem amet unde deserunt, fuga molestiae incidunt nemo sapiente expedita ullam nobis? Asperiores saepe alias quos dolorum.
-
+                    </p>
+                    <br>
+                    <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet mollitia ipsum hic architecto explicabo. Repellat labore maiores, neque dolorem, ea temporibus dolores tempore iusto repellendus asperiores consectetur dolore voluptatem consequatur?
-
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, totam. Earum neque illo sint sapiente praesentium tempore, ab repellat. Beatae ullam voluptas iste a quod doloribus. Quo fugiat rerum eius.
                     </p>
                 </div>
 
                 <div class="history">
-                    <h3>Histórico</h3>
-
-                    <div class="grafic"></div>
-
+                    <h3>Histórico de preço</h3>
+                    <div class="grafic"><!-- gráfico entra aqui quando o JS existir --></div>
                     <div class="table-price">
                         <a href="#">
-                            <img src="/img/cmhj5bujv007502rpaz76cgm7.png" alt="logo">
+                            <img src="/img/cmhj5bujv007502rpaz76cgm7.png" alt="logo PlayStation">
                             <p>R$ 180,00</p>
                         </a>
                     </div>
                 </div>
-
             </div>
 
-            <h2>Recomendações</h2>
+            <h3 class="section-title">Requisitos de sistema</h3>
             <section class="recomenda">
-                
                 <div class="box-reco">
-                    <h3>Minimo:</h3>
+                    <h3>Mínimo</h3>
                     <ul>
                         <li>Requer um processador e sistema operacional de 64 bits</li>
                         <li>SO: Windows 10 RS5 x64</li>
-                        <li>PROCESSADOR: AMD Ryzen 5 1600 or Intel i5-4440</li>
-                        <li>MEMÓRIA: 8 GB de RAM</li>
-                        <li>PLACA DE VÍDEO: AMD RX 570 or Nvidia GTX 1050 Ti</li>
-                        <li>DIRECTX: Versão 12</li>
-                        <li>ARMAZENAMENTO: 50 GB de espaço disponível</li>
+                        <li>Processador: AMD Ryzen 5 1600 ou Intel i5-4440</li>
+                        <li>Memória: 8 GB de RAM</li>
+                        <li>Placa de vídeo: AMD RX 570 ou Nvidia GTX 1050 Ti</li>
+                        <li>DirectX: Versão 12</li>
+                        <li>Armazenamento: 50 GB de espaço disponível</li>
                     </ul>
                 </div>
 
                 <div class="box-reco">
-                    <h3>Maximo:</h3>
+                    <h3>Recomendado</h3>
                     <ul>
                         <li>Requer um processador e sistema operacional de 64 bits</li>
                         <li>SO: Windows 10 19H2 x64</li>
-                        <li>PROCESSADOR: AMD Ryzen 7 3700X or Intel i7-9700k</li>
-                        <li>MEMÓRIA: 16 GB de RAM</li>
-                        <li>PLACA DE VÍDEO: Radeon RX 5700 XT or Nvidia RTX 2070</li>
-                        <li>DIRECTX: Versão 12</li>
-                        <li>ARMAZENAMENTO: 50 GB de espaço disponível</li>
+                        <li>Processador: AMD Ryzen 7 3700X ou Intel i7-9700K</li>
+                        <li>Memória: 16 GB de RAM</li>
+                        <li>Placa de vídeo: Radeon RX 5700 XT ou Nvidia RTX 2070</li>
+                        <li>DirectX: Versão 12</li>
+                        <li>Armazenamento: 50 GB de espaço disponível</li>
                     </ul>
                 </div>
             </section>
@@ -132,6 +128,5 @@
         <span>© 2026 Press Buy. Preços exibidos a título ilustrativo.</span>
         <span class="mono">v1.0</span>
     </footer>
-
 </body>
 </html>
